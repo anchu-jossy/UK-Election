@@ -14,8 +14,9 @@ interface ResultsService {
      * @throws ResultsRepositoryException if there was an error retrieving or
      *                                    parsing the results data from the back end.
      */
-    @Throws(ResultsRepositoryException::class)
     suspend fun latestResults(): Results
 
+
+    suspend fun candidateResults():List<Candidate>
 }
 

@@ -23,12 +23,13 @@ internal class JSONResultsRepository : ResultsRepository {
         resultsFetchedCount++
 
         simulateNetworkDelay()
-
+//return  RESULTS_3
         return when (resultsFetchedCount) {
             1 -> RESULTS_1
             2 -> RESULTS_2
             else -> RESULTS_3
         }
+
     }
 
     override suspend fun allCandidates(): List<Candidate> {

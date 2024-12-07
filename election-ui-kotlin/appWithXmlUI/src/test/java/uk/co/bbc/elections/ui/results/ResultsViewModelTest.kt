@@ -9,6 +9,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import uk.co.bbc.elections.MainDispatcherRule
+import uk.co.bbc.elections.api.Candidate
 import uk.co.bbc.elections.api.Result
 import uk.co.bbc.elections.api.Results
 import uk.co.bbc.elections.api.ResultsService
@@ -153,5 +154,9 @@ class StubResultsService : ResultsService {
         latestResultsInvocationCount += 1
 
         return results
+    }
+
+    override suspend fun candidateResults(): List<Candidate> {
+        TODO("Not yet implemented")
     }
 }
